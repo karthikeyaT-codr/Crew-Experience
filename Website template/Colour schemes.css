@@ -1,0 +1,321 @@
+/* =========================
+   GENERAL PAGE
+========================= */
+
+.bg {
+    background-color: #F4EFE6;
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #211610;
+    letter-spacing: 1px;
+}
+
+.navbar li {
+    flex: 1;
+}
+
+.navbar li a {
+    display: block;
+    color: #FFFDF8;
+    text-align: center;
+    padding: 24px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #3A2418;
+    transition: 0.3s;
+}
+
+.navbar li a:hover {
+    background-color: #C8A66A;
+    color: #211610;
+}
+
+
+/* Active Home button */
+
+.navbar-text1 {
+    border-bottom: 6px solid #C8A66A;
+}
+
+
+/* =========================
+   MAIN HEADING
+========================= */
+
+h1 {
+    color: #3A2418;
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    margin-top: 50px;
+}
+
+
+/* =========================
+   ABOUT STRIP
+========================= */
+
+.about-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 3px solid #C8A66A;
+    border-bottom: 3px solid #C8A66A;
+
+    background-color: #fffcf7b2;
+    
+}
+
+/* =========================
+   STRIP SECTIONS
+========================= */
+
+article {
+    display: block;
+}
+
+.info {
+    padding: 30px 36px;
+    border-right: 3px solid #C8A66A;
+    text-align: center;
+}
+
+.info2 {
+    padding: 30px 36px;
+    text-align: center;
+}
+
+.subheader{
+    color:#3A2418;
+    font-size: 30px;
+}
+
+.mini{
+    color: #b4a994;
+    font-size: 15px;
+}
+
+
+/* =========================
+   EXTRA TEXT
+========================= */
+
+.info-div {
+    color: #3A2418;
+    font-size: 30px;
+    line-height: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.one{
+    text-align: left;
+    font-size: 65px;
+}
+
+/*---------REVIEWS SCROLLING SECTION----------*/
+
+.reviews-section {
+    padding: 50px 20px;
+    background-color: #F4EFE6;
+    text-align: center;
+}
+
+.reviews-section h2 {
+    color: #3A2418;
+    font-size: 36px;
+    margin-bottom: 35px;
+}
+
+
+.review-card {
+    grid-area: 1 / 1;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px;
+    background-color: #FFFDF8;
+    color: #3A2418;
+    border: 1px solid #C8A66A;
+    border-radius: 15px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        visibility 0s linear 0.6s;
+}
+
+.review-card.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        visibility 0s;
+}
+
+.review-card p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.review-card h3 {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.stars {
+    color: #B58A3A;
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .review-card {
+        transition: none;
+    }
+}
+
+
+
+
+.reviews-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 24px;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.review-side-photo {
+    display: block;
+    width: 100%;
+    height: 340px;
+    min-height: 0;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 14px;
+    border: 1px solid #C8A66A;
+}
+
+
+.review-carousel {
+    position: relative;
+    display: grid;
+    min-width: 0;
+    width: 100%;
+}
+
+/* Keep your existing .review-card and
+   .review-card.active styles below this */
+
+@media (max-width: 750px) {
+    .reviews-layout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .review-side-photo {
+        height: 200px;
+        min-height: 0;
+        max-height: 220px;
+    }
+    .about-strip {
+    grid-template-columns: 1fr;
+    }
+
+    .info {
+        border-right: none;
+        border-bottom: 3px solid #C8A66A;
+    }
+}
+
+
+.about-strip1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size:40px;
+}
+
+.subheader1{
+    color:#3A2418;
+    font-size: 120px;
+    letter-spacing: 18px;
+}
+
+.sub{
+    text-align: center;
+    color: #3A2418;
+    font-size:50px;
+}
+
+.info3 {
+    padding: 20px 25px;
+    text-align: center;
+}
+
+
+.about1 {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+}
+
+.photo1 {
+    display: block;
+    width: 500px;
+    height: 340px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 14px;
+    border: 1px solid #C8A66A;
+    flex-shrink: 0;
+}
+
+.barber-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.sub1 {
+    color: #3A2418;
+    font-size: 50px;
+    margin: 0 0 15px;
+}
+
+.info-div1{
+    text-align: left;
+    color: #3A2418;
+    font-size: 30px;
+    line-height: 40px;
+    padding-left: 0px;
+    padding-right: 50px;
+}
+
+.barber-text .info-div1 {
+    margin: 0;
+}
+
